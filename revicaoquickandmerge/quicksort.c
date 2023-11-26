@@ -59,9 +59,12 @@ void troca(int v[], int i, int j){
     int aux=v[i];
     v[i]=v[j];
     v[j]=aux;
-}
+}/*A função troca recebe um array v e dois índices i e j, trocando os elementos nos índices i e j.*/
 int particao_aleatoria(int v[],int inicio, int fim){
     int indice = (rand()%(fim-inicio+1))+inicio;
     troca(v,indice, inicio);
     return particao(v,inicio,fim);
-}
+}/*
+A função particao_aleatoria seleciona aleatoriamente um pivô dentro da faixa de índices 
+fornecida e troca esse elemento com o elemento no índice de início. 
+Em seguida, chama a função particao para continuar com o processo de particionamento.*/
